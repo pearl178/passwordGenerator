@@ -19,4 +19,12 @@ for element in range(0,nr_symbols):
  password += random.choice(symbols)
 for element in range(0,nr_numbers):
  password += random.choice(numbers)
-print(password)
+
+# Randomize the order of characters in the password
+password_random = ""
+chars = []
+for n in range(0,len(password)):
+  chars.append(password[n])
+for n in range(0,len(password)):
+  password_random += random.choice(chars)
+print(password_random)
