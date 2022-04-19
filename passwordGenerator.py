@@ -25,6 +25,7 @@ password_random = ""
 chars = []
 for n in range(0,len(password)):
   chars.append(password[n])
+random.shuffle(chars)
 for n in range(0,len(password)):
-  password_random += random.choice(chars)
+  password_random += chars[n]
 print(password_random)
